@@ -9,29 +9,32 @@
  
 <footer class="admin-footer">
     <div class="footer-bottom">
+
         <div class="footer-copyright">
             <p>&copy; <?php echo date('Y'); ?> LGU #4. All rights reserved.</p>
         </div>
-        
+
         <div class="footer-legal">
             <a href="#" class="footer-link">Privacy Policy</a>
             <a href="#" class="footer-link">Terms of Service</a>
             <a href="#" class="footer-link">Cookie Policy</a>
         </div>
-        
+
         <div class="theme-toggle">
-            <button class="theme-toggle-btn" data-theme="system" aria-label="System theme">
+            <button class="theme-toggle-btn" data-theme="system">
                 <i class="fas fa-desktop"></i>
             </button>
-            <button class="theme-toggle-btn" data-theme="light" aria-label="Light theme">
+            <button class="theme-toggle-btn" data-theme="light">
                 <i class="fas fa-sun"></i>
             </button>
-            <button class="theme-toggle-btn" data-theme="dark" aria-label="Dark theme">
+            <button class="theme-toggle-btn" data-theme="dark">
                 <i class="fas fa-moon"></i>
             </button>
         </div>
+
     </div>
 </footer>
+
 
 <script>
     // Theme Toggle functionality - Fixed version

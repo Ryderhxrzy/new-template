@@ -208,5 +208,6 @@ $pageTitle = 'Buttons - Sidebar Demo';
         </div>
         <?php include('includes/sidebar-footer.php') ?>
     </div>
+
 </body>
 </html>

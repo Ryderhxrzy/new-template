@@ -121,6 +121,7 @@
     letter-spacing: 0.05em;
     color: var(--sidebar-text-secondary-1);
     margin-bottom: 0.75rem;
+    font-style: italic;
     padding: 0 0.75rem;
 }
 
@@ -289,7 +290,6 @@ body.sidebar-open {
     .sidebar {
         transform: translateX(0);
     }
-    
     .sidebar-overlay {
         display: none;
     }
