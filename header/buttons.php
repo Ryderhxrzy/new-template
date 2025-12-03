@@ -27,7 +27,7 @@ include 'includes/header.php'; ?>
         <div class="main-container">
             <div class="sub-container">
                 <h1>UI Components Library</h1>
-                <p>A comprehensive collection of reusable UI components built with modern CSS and JavaScript. Perfect for building beautiful, responsive web applications.</p>
+                <p>Complete form layouts with various input types, validation states, and submission handling. Perfect for user data collection and interaction.</p>
                 
                 <div class="hero-buttons">
                     <a href="#button-variants" class="btn btn-primary">View Components</a>

@@ -351,14 +351,14 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             e.stopPropagation();
             
-            // Close all modals first
+            // Close all modals first (except message content modal)
             const notificationModal = document.getElementById('notificationModal');
             const messageModal = document.getElementById('messageModal');
             const messageContentModal = document.getElementById('messageContentModal');
             
             if (notificationModal) notificationModal.classList.remove('show');
             if (messageModal) messageModal.classList.remove('show');
-            if (messageContentModal) messageContentModal.classList.remove('show');
+            // Don't close messageContentModal - let it stay open like Facebook chat
             
             // Remove active states from notification buttons
             const notificationBtn = document.querySelector('.notification-btn[aria-label="Notifications"]');

@@ -46,12 +46,12 @@ $pageTitle = 'Buttons - Sidebar Demo';
                             </a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            <span>UI Components Library</span>
+                            <span>Buttons</span>
                         </li>
                     </ol>
                 </nav>
-                <h1>UI Components Library</h1>
-                <p>A comprehensive collection of reusable UI components built with modern CSS and JavaScript. Perfect for building beautiful, responsive web applications.</p>
+                <h1>Buttons Components</h1>
+                <p>Complete form layouts with various input types, validation states, and submission handling. Perfect for user data collection and interaction.</p>
             </div>
             
             <div class="sub-container">
