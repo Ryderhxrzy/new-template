@@ -521,7 +521,7 @@ $pageTitle = 'Cards - Sidebar Demo';
                 </div>
             </div>
         </div>
-        <?php include('includes/sidebar-footer.php') ?>
+        <?php include('includes/admin-footer.php') ?>
     </div>
 
     <!-- ===================================

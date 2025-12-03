@@ -153,8 +153,8 @@
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <script>
-// Sidebar functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Sidebar functionality
     const sidebar = document.getElementById('sidebar');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
     
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.remove('sidebar-open');
     }
 
-    // Expose helpers globally so other components (like the admin header)
+    // Expose functions globally so other scripts
     // can trigger the sidebar without duplicating logic.
     window.sidebarToggle = toggleSidebar;
     window.sidebarClose = closeSidebar;
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebarOverlay.addEventListener('click', closeSidebar);
     }
     
-    // Close on escape key
+    // Close sidebar on Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && sidebar.classList.contains('sidebar-open')) {
             closeSidebar();
@@ -202,13 +202,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 submenu.classList.toggle('sidebar-submenu-open');
                 this.classList.toggle('active', !isOpen);
                 
-                // Keep the icon class toggle for compatibility
+                // Toggle icon based on new state
                 if (icon) {
-                    icon.classList.toggle('fa-chevron-down');
-                    icon.classList.toggle('fa-chevron-up');
+                    if (submenu.classList.contains('sidebar-submenu-open')) {
+                        // Now open - show up chevron
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    } else {
+                        // Now closed - show down chevron
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
                 }
             }
         });
+    });
+    
+    // Auto-open submenu if it contains active item
+    const activeLinks = document.querySelectorAll('.sidebar-submenu .sidebar-link.active');
+    activeLinks.forEach(activeLink => {
+        const submenu = activeLink.closest('.sidebar-submenu');
+        const toggle = submenu ? submenu.previousElementSibling : null;
+        
+        if (submenu && toggle && toggle.classList.contains('sidebar-submenu-toggle')) {
+            submenu.classList.add('sidebar-submenu-open');
+            toggle.classList.add('active');
+            
+            const icon = toggle.querySelector('.submenu-icon');
+            if (icon) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        }
     });
 });
 </script>

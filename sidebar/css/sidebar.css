@@ -186,10 +186,6 @@
     transition: transform 0.2s ease;
 }
 
-.sidebar-submenu-toggle.active .submenu-icon {
-    transform: rotate(180deg);
-}
-
 .sidebar-submenu {
     list-style: none;
     padding: 0;
