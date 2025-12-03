@@ -1,13 +1,13 @@
 <?php 
 /**
- * LGU #4 - Buttons Component Page
- * Dedicated page showcasing button styles and variants
+ * LGU #4 - Cards Component Page
+ * Dedicated page showcasing card components and layouts
  * 
  * This page demonstrates:
- * - Button variants (primary, secondary, success, danger, warning, info)
- * - Button sizes (large, normal, small)
- * - Outline buttons
- * - Button usage examples and implementation
+ * - Various card styles and layouts
+ * - Card content organization
+ * - Interactive card features
+ * - Responsive card designs
  * 
  * @version 1.0.0
  * @author LGU #4 Development Team
@@ -16,30 +16,30 @@
 // Include header with navigation and theme functionality
 include 'includes/header.php'; ?>
 
-<!-- Page-specific CSS for buttons -->
+<!-- Page-specific CSS for cards -->
 <link rel="stylesheet" href="css/buttons.css">
 <link rel="stylesheet" href="css/hero.css">
 
 <!-- ===================================
-   HERO SECTION - Landing page hero for buttons
+   HERO SECTION - Page-specific hero for cards
    =================================== -->
     <div class="hero-section">
         <div class="main-container">
             <div class="sub-container">
-                <h1>UI Components Library</h1>
-                <p>Complete form layouts with various input types, validation states, and submission handling. Perfect for user data collection and interaction.</p>
+                <h1>Card Components</h1>
+                <p>Flexible card components with various layouts, styles, and interactive features for organizing content beautifully.</p>
                 
                 <div class="hero-buttons">
-                    <a href="#button-variants" class="btn btn-primary">View Components</a>
-                    <a href="forms.php" class="btn btn-secondary">Try Forms</a>
-                    <a href="datatables.php" class="btn btn-outline-primary">See Tables</a>
+                    <a href="#basic-cards" class="btn btn-primary">View Cards</a>
+                    <a href="modals.php" class="btn btn-secondary">See Modals</a>
+                    <a href="#implementation" class="btn btn-outline-primary">How to Use</a>
                 </div>
             </div>
         </div>
     </div>
 
 <!-- ===================================
-   MAIN CONTENT - Button demonstrations and documentation
+   MAIN CONTENT - Card demonstrations and documentation
    =================================== -->
     <div class="main-content">
         <div class="main-container">
@@ -191,7 +191,6 @@ include 'includes/header.php'; ?>
 &lt;button class="btn btn-success"&gt;Active&lt;/button&gt;
 &lt;button class="btn btn-info loading"&gt;Loading&lt;/button&gt;</code></pre>
                     </div>
-
                 </div>
             </div>
         </div>
