@@ -1,13 +1,14 @@
 <?php
 /**
- * Reusable Admin Header Component
+ * Reusable Admin Header Component - Improved Design
  * Include this file in your pages: <?php include 'sidebar/admin-header.php'; ?>
  * 
  * Features:
  * - Responsive menu toggle
- * - Notification and message icons with badges
+ * - Notification and message icons with badges (outlined style)
  * - User profile with avatar and info
  * - Dark mode support
+ * - Clean, modern design
  */
 ?>
 
@@ -18,10 +19,8 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
             <input type="text" class="search-input" placeholder="Search...">
-            <button class="search-btn" aria-label="Search">
-                <i class="fas fa-search"></i>
-            </button>
         </div>
     </div>
     
@@ -42,14 +41,17 @@
             </div>
         </div>
         
+        <div class="header-divider"></div>
+        
         <div class="user-profile">
             <div class="user-info">
                 <div class="user-name">Admin User</div>
                 <div class="user-role">Administrator</div>
             </div>
             <div class="user-avatar">
-                <i class="fas fa-user-circle"></i>
+                <img src="https://ui-avatars.com/api/?name=Admin+User&background=4c8a89&color=fff&size=128" alt="Admin User" class="avatar-img">
             </div>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
         </div>
     </div>
 </header>
@@ -58,41 +60,18 @@
 // Admin Header functionality
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menuToggle');
-    const sidebar = document.getElementById('sidebar');
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
     
     // Toggle sidebar from header menu button
-    if (menuToggle && sidebar) {
+    if (menuToggle) {
         menuToggle.addEventListener('click', function() {
-            sidebar.classList.toggle('sidebar-open');
-            if (sidebarOverlay) {
-                sidebarOverlay.classList.toggle('sidebar-overlay-open');
-            }
-            document.body.classList.toggle('sidebar-open');
-        });
-    }
-    
-    // Close sidebar when clicking overlay
-    if (sidebarOverlay) {
-        sidebarOverlay.addEventListener('click', function() {
-            if (sidebar) {
-                sidebar.classList.remove('sidebar-open');
-                sidebarOverlay.classList.remove('sidebar-overlay-open');
-                document.body.classList.remove('sidebar-open');
+            // Use the global sidebarToggle function exposed by sidebar.php
+            if (typeof window.sidebarToggle === 'function') {
+                window.sidebarToggle();
+            } else {
+                console.warn('Sidebar toggle function not found. Make sure sidebar.php is included before admin-header.php');
             }
         });
     }
-    
-    // Close on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && sidebar && sidebar.classList.contains('sidebar-open')) {
-            sidebar.classList.remove('sidebar-open');
-            if (sidebarOverlay) {
-                sidebarOverlay.classList.remove('sidebar-overlay-open');
-            }
-            document.body.classList.remove('sidebar-open');
-        }
-    });
     
     // Search functionality
     const searchInput = document.querySelector('.search-input');
@@ -104,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const searchTerm = searchInput.value.trim();
                 if (searchTerm) {
                     console.log('Searching for:', searchTerm);
-                    // Add search functionality here
                 }
             }
         });
@@ -116,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const searchTerm = searchInput.value.trim();
                 if (searchTerm) {
                     console.log('Searching for:', searchTerm);
-                    // Add search functionality here
                 }
             }
         });
@@ -127,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
     notificationBtns.forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
-            // Add notification dropdown functionality here
             console.log('Notification clicked:', this.getAttribute('aria-label'));
         });
     });
@@ -136,9 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const userProfile = document.querySelector('.admin-header .user-profile');
     if (userProfile) {
         userProfile.addEventListener('click', function() {
-            // Add user menu dropdown functionality here
             console.log('User profile clicked');
         });
-    });
+    }
 });
 </script>

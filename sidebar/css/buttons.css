@@ -88,23 +88,23 @@
    =================================== */
 .btn-outline-primary {
     background-color: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--primary-color-1);
+    border-color: var(--primary-color-1);
 }
 
 .btn-outline-primary:hover {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-1);
     color: white;
 }
 
 .btn-outline-secondary {
     background-color: transparent;
-    color: var(--text-color);
-    border-color: var(--border-color);
+    color: var(--text-color-1);
+    border-color: var(--border-color-1);
 }
 
 .btn-outline-secondary:hover {
-    background-color: var(--text-color);
+    background-color: var(--text-color-1);
     color: white;
 }
 
@@ -213,17 +213,17 @@
    =================================== */
 .component-section {
     margin-bottom: 3rem;
-    background: var(--card-bg);
+    background: var(--card-bg-1);
     border-radius: 12px;
     padding: 2rem;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 12px var(--shadow);
+    border: 1px solid var(--border-color-1);
+    box-shadow: 0 4px 12px var(--shadow-1);
     width: 100%;
     overflow: hidden;
 }
 
 .component-section h3 {
-    color: var(--text-color);
+    color: var(--text-color-1);
     font-size: 1.75rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -235,13 +235,13 @@
 }
 
 .component-section h3 i {
-    color: var(--primary-color);
+    color: var(--primary-color-1);
     font-size: 1.5rem;
     flex-shrink: 0;
 }
 
 .component-section h4 {
-    color: var(--text-color);
+    color: var(--text-color-1);
     font-size: 1.25rem;
     font-weight: 600;
     margin: 2rem 0 1rem 0;
@@ -250,7 +250,7 @@
 }
 
 .component-section p {
-    color: var(--text-secondary);
+    color: var(--text-secondary-1);
     line-height: 1.6;
     margin-bottom: 1.5rem;
     font-size: 1rem;
@@ -261,8 +261,8 @@
    USAGE REQUIREMENTS - File dependencies display
    =================================== */
 .usage-requirements {
-    background: var(--header-bg);
-    border: 1px solid var(--border-color);
+    background: var(--header-bg-1);
+    border: 1px solid var(--border-color-1);
     border-radius: 8px;
     padding: 1.5rem;
     margin: 1.5rem 0;
@@ -276,9 +276,9 @@
     gap: 1rem;
     margin-bottom: 0.75rem;
     padding: 0.75rem;
-    background: var(--card-bg);
+    background: var(--card-bg-1);
     border-radius: 6px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color-1);
     flex-wrap: wrap;
 }
 
@@ -287,7 +287,7 @@
 }
 
 .requirement-item i {
-    color: var(--primary-color);
+    color: var(--primary-color-1);
     font-size: 1.1rem;
     width: 20px;
     text-align: center;
@@ -313,23 +313,23 @@
     gap: 1rem;
     margin-bottom: 1.5rem;
     padding: 1rem;
-    background: var(--card-bg);
+    background: var(--card-bg-1);
     border-radius: 8px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color-1);
     transition: all 0.3s ease;
     flex-wrap: wrap;
     width: 100%;
 }
 
 .step-item:hover {
-    border-color: var(--primary-color);
-    box-shadow: 0 4px 12px var(--shadow);
+    border-color: var(--primary-color-1);
+    box-shadow: 0 4px 12px var(--shadow-1);
 }
 
 .step-number {
     width: 32px;
     height: 32px;
-    background: var(--primary-color);
+    background: var(--primary-color-1);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -349,7 +349,7 @@
 }
 
 .step-content strong {
-    color: var(--text-color);
+    color: var(--text-color-1);
     font-size: 1.1rem;
     display: block;
     margin-bottom: 0.5rem;
@@ -358,8 +358,8 @@
 
 .step-content pre {
     margin: 0.5rem 0 0 0;
-    background: var(--header-bg);
-    border: 1px solid var(--border-color);
+    background: var(--header-bg-1);
+    border: 1px solid var(--border-color-1);
     border-radius: 6px;
     padding: 1rem;
     overflow-x: auto;
@@ -369,7 +369,7 @@
 .step-content code {
     font-family: 'Courier New', monospace;
     font-size: 13px;
-    color: var(--text-color);
+    color: var(--text-color-1);
     line-height: 1.4;
     word-break: break-all;
 }
@@ -378,8 +378,8 @@
    CODE BLOCKS - Syntax highlighting and styling
    =================================== */
 pre {
-    background: var(--header-bg);
-    border: 1px solid var(--border-color);
+    background: var(--header-bg-1);
+    border: 1px solid var(--border-color-1);
     border-radius: 8px;
     padding: 1.5rem;
     overflow-x: auto;
@@ -390,7 +390,7 @@ pre {
 code {
     font-family: 'Courier New', monospace;
     font-size: 14px;
-    color: var(--text-color);
+    color: var(--text-color-1);
     word-break: break-all;
 }
 
@@ -434,7 +434,6 @@ a i {
 }
 
 @media (max-width: 1024px) {
-    
     .component-section h3 {
         font-size: 1.5rem;
     }
@@ -608,7 +607,7 @@ a i {
     .component-section {
         padding: 1rem;
     }
-    
+
     .component-section h3 {
         font-size: 1.125rem;
     }

@@ -147,30 +147,6 @@
             </div>
         </nav>
     </div>
-    
-    <!-- Admin Footer -->
-    <div class="sidebar-footer">
-        <!-- Copyright -->
-        <div class="sidebar-copyright">
-            <p>&copy; <?php echo date('Y'); ?> LGU #4</p>
-            <p>All rights reserved</p>
-        </div>
-        
-        <!-- Theme Toggle -->
-        <div class="sidebar-theme-toggle">
-            <div class="theme-toggle">
-                <button class="theme-toggle-btn" data-theme="system" aria-label="System theme">
-                    <i class="fas fa-desktop"></i>
-                </button>
-                <button class="theme-toggle-btn" data-theme="light" aria-label="Light theme">
-                    <i class="fas fa-sun"></i>
-                </button>
-                <button class="theme-toggle-btn" data-theme="dark" aria-label="Dark theme">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </div>
-    </div>
 </aside>
 
 <!-- Sidebar Overlay for mobile -->
@@ -194,6 +170,16 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.remove('sidebar-open');
         sidebarOverlay.classList.remove('sidebar-overlay-open');
         document.body.classList.remove('sidebar-open');
+    }
+
+    // Expose helpers globally so other components (like the admin header)
+    // can trigger the sidebar without duplicating logic.
+    window.sidebarToggle = toggleSidebar;
+    window.sidebarClose = closeSidebar;
+    
+    // Close sidebar when clicking overlay
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', closeSidebar);
     }
     
     // Close on escape key
@@ -219,51 +205,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-    });
-    
-    // Theme Toggle functionality
-    const themeToggleBtns = document.querySelectorAll('.sidebar-theme-toggle .theme-toggle-btn');
-    const htmlElement = document.documentElement;
-    
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme') || 'system';
-    htmlElement.setAttribute('data-theme', savedTheme);
-    updateThemeButtons(savedTheme);
-    
-    themeToggleBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const theme = btn.getAttribute('data-theme');
-            htmlElement.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            updateThemeButtons(theme);
-            
-            // Apply system theme if selected
-            if (theme === 'system') {
-                applySystemTheme();
-            }
-        });
-    });
-    
-    function updateThemeButtons(theme) {
-        themeToggleBtns.forEach(btn => {
-            if (btn.getAttribute('data-theme') === theme) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
-            }
-        });
-    }
-    
-    function applySystemTheme() {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        htmlElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-    }
-    
-    // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-        if (localStorage.getItem('theme') === 'system') {
-            applySystemTheme();
-        }
     });
 });
 </script>
