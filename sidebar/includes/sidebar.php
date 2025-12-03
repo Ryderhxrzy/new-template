@@ -198,7 +198,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const icon = this.querySelector('.submenu-icon');
             
             if (submenu) {
+                const isOpen = submenu.classList.contains('sidebar-submenu-open');
                 submenu.classList.toggle('sidebar-submenu-open');
+                this.classList.toggle('active', !isOpen);
+                
+                // Keep the icon class toggle for compatibility
                 if (icon) {
                     icon.classList.toggle('fa-chevron-down');
                     icon.classList.toggle('fa-chevron-up');
