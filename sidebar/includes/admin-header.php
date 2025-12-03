@@ -366,8 +366,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (notificationBtn) notificationBtn.classList.remove('active');
             if (messageBtn) messageBtn.classList.remove('active');
             
-            // Toggle user profile dropdown
+            // Toggle user profile dropdown and active state
+            const isOpen = userProfileDropdown.classList.contains('show');
             userProfileDropdown.classList.toggle('show');
+            userProfileBtn.classList.toggle('active', !isOpen);
         });
     }
     
@@ -402,6 +404,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (userProfileDropdown && userProfileDropdown.classList.contains('show')) {
             if (!userProfileDropdown.contains(e.target) && !e.target.closest('#userProfileBtn')) {
                 userProfileDropdown.classList.remove('show');
+                userProfileBtn.classList.remove('active');
             }
         }
         

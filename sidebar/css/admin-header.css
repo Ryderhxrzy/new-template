@@ -222,7 +222,10 @@
 
 .user-profile:hover .dropdown-icon {
     color: var(--primary-color-1);
-    transform: translateY(2px);
+}
+
+.user-profile.active .dropdown-icon {
+    transform: translateY(2px) rotate(180deg);
 }
 
 /* ===================================
