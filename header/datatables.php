@@ -17,8 +17,8 @@
 include 'includes/header.php'; ?>
 
 <!-- Page-specific CSS for data tables -->
-<link rel="stylesheet" href="css/pages/datatables.css">
-<link rel="stylesheet" href="css/pages/hero.css">
+<link rel="stylesheet" href="css/datatables.css">
+<link rel="stylesheet" href="css/hero.css">
 
 <!-- DataTables CSS -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">

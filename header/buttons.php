@@ -17,8 +17,8 @@
 include 'includes/header.php'; ?>
 
 <!-- Page-specific CSS for buttons -->
-<link rel="stylesheet" href="css/pages/buttons.css">
-<link rel="stylesheet" href="css/pages/hero.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/hero.css">
 
 <!-- ===================================
    HERO SECTION - Landing page hero for buttons

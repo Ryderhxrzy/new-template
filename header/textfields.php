@@ -17,8 +17,8 @@
 include 'includes/header.php'; ?>
 
 <!-- Page-specific CSS for text fields -->
-<link rel="stylesheet" href="css/pages/textfields.css">
-<link rel="stylesheet" href="css/pages/hero.css">
+<link rel="stylesheet" href="css/textfields.css">
+<link rel="stylesheet" href="css/hero.css">
 
 <!-- ===================================
    HERO SECTION - Page-specific hero for text fields

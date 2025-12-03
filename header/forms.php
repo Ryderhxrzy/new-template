@@ -17,8 +17,8 @@
 include 'includes/header.php'; ?>
 
 <!-- Page-specific CSS for forms -->
-<link rel="stylesheet" href="css/pages/forms.css">
-<link rel="stylesheet" href="css/pages/hero.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/hero.css">
 
 <!-- ===================================
    HERO SECTION - Page-specific hero for forms

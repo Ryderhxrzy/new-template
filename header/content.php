@@ -17,8 +17,8 @@
 include 'includes/header.php'; ?>
 
 <!-- Page-specific CSS for content elements -->
-<link rel="stylesheet" href="css/pages/content.css">
-<link rel="stylesheet" href="css/pages/hero.css">
+<link rel="stylesheet" href="css/content.css">
+<link rel="stylesheet" href="css/hero.css">
 
 <!-- ===================================
    HERO SECTION - Page-specific hero for content elements

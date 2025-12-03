@@ -17,8 +17,8 @@
 include 'includes/header.php'; ?>
 
 <!-- Page-specific CSS for cards -->
-<link rel="stylesheet" href="css/pages/cards.css">
-<link rel="stylesheet" href="css/pages/hero.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/hero.css">
 
 <!-- ===================================
    HERO SECTION - Page-specific hero for cards
