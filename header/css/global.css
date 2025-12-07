@@ -187,25 +187,31 @@ html::-webkit-scrollbar-thumb:hover,
     gap: 2rem;
 }
 
-/* Logo */
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--nav-text);
-    text-decoration: none;
-    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    text-decoration: none;
 }
 
-.logo:hover {
-    color: var(--primary-color);
-    transform: translateY(-1px);
+.logo-img {
+    height: 60px;             /* Better size for visibility */
+    width: auto;               /* Maintain proportions */
+    object-fit: contain;       /* Prevent distortion */
+    transition: transform 0.25s ease;
 }
 
-.logo i {
-    color: var(--primary-color);
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 80px;          /* smaller on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 70px;          /* smaller on phones */
+    }
 }
 
 /* Navigation */

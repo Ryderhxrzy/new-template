@@ -17,8 +17,7 @@
     <div class="sidebar-header">
         <div class="sidebar-brand">
             <div class="brand-logo">
-                <i class="fas fa-code"></i>
-                <span>Admin Panel</span>
+                <img src="images/logo.svg" alt="" class="logo-img">
             </div>
         </div>
     </div>

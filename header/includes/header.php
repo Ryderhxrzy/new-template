@@ -23,8 +23,7 @@
     <header class="header">
         <div class="header-container">
             <a href="buttons.php" class="logo">
-                <i class="fas fa-code"></i>
-                <span>LGU #4</span>
+                <img src="images/logo.svg" alt="" class="logo-img">
             </a>
             
             <nav class="nav-center">
@@ -51,8 +50,7 @@
         <div class="mobile-nav">
             <div class="mobile-nav-header">
                 <a href="buttons.php" class="logo">
-                    <i class="fas fa-code"></i>
-                    <span>LGU #4</span>
+                    <img src="images/logo.svg" alt="" class="logo-img">
                 </a>
                 <button class="mobile-nav-close" aria-label="Close mobile menu">
                     <i class="fas fa-times"></i>
